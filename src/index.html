@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,54 +8,52 @@
         body {
             margin: 0;
             padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #FFD700, #FF6347);
+            color: #fff;
+            text-align: center;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #F2F2F2; /* Light gray background */
-            color: #000; /* Text color */
-            font-family: 'Roboto', sans-serif; /* Use a different font style */
-            position: relative; /* Set position to relative for absolute positioning */
         }
 
-        #logo {
-            max-width: 80%; /* Adjust the max-width to control the logo size */
-            height: auto;
-            align-items: center;
+        .container {
+            max-width: 600px;
+            margin: auto;
         }
 
-        #coming-soon {
-            position: absolute;
-            top: 10px; /* Adjust the top position as needed */
-            left: 0;
-            text-align: left; /* Align text to the left */
-            font-size: 36px; /* Increase the font size */
-            font-weight: bold; /* Make the text bold */
-            font-style: italic; /* Apply italic style */
-            white-space: nowrap; /* Prevent text from wrapping */
-            overflow: hidden; /* Hide the overflowing text */
-            animation: scrollText 5s linear infinite; /* Animation for scrolling text */
+        h1 {
+            color: #fff;
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
 
-        @keyframes scrollText {
-            0% {
-                transform: translateX(-100%); /* Start from the leftmost edge */
+        p {
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        .flash {
+            animation: flash 1s infinite alternate;
+        }
+
+        @keyframes flash {
+            from {
+                opacity: 1;
             }
-            100% {
-                transform: translateX(100%); /* Scroll to the rightmost edge */
+            to {
+                opacity: 0.5;
             }
         }
     </style>
 </head>
-
 <body>
-    <div>
-        <img id="logo" src="your_logo.png" alt="Your Restaurant Logo">
-        <div id="coming-soon">
-            Coming Soon!
-        </div>
+    <div class="container">
+        <h1>Welcome to Yammee Food!</h1>
+        <p class="flash">Our new restaurant is coming soon. Get ready for a delightful culinary experience. Stay tuned for updates and exciting news!</p>
     </div>
 </body>
-
 </html>
