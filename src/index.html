@@ -2,16 +2,61 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Yammee Food</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #F2F2F2; /* Light gray background */
+            color: #000; /* Text color */
+            font-family: 'Roboto', sans-serif; /* Use a different font style */
+            position: relative; /* Set position to relative for absolute positioning */
+        }
+
+        #logo {
+            max-width: 80%; /* Adjust the max-width to control the logo size */
+            height: auto;
+            align-items: center;
+        }
+
+        #coming-soon {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            left: 0;
+            text-align: left; /* Align text to the left */
+            font-size: 36px; /* Increase the font size */
+            font-weight: bold; /* Make the text bold */
+            font-style: italic; /* Apply italic style */
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide the overflowing text */
+            animation: scrollText 5s linear infinite; /* Animation for scrolling text */
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(-100%); /* Start from the leftmost edge */
+            }
+            100% {
+                transform: translateX(100%); /* Scroll to the rightmost edge */
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <main>
-    <h1>Coming Soon...</h1>
-  </main>
+    <div>
+        <img id="logo" src="your_logo.png" alt="Your Restaurant Logo">
+        <div id="coming-soon">
+            Coming Soon!
+        </div>
+    </div>
 </body>
 
 </html>
